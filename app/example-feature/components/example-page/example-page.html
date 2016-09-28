@@ -1,0 +1,14 @@
+<div>
+  Example page
+</div>
+<div>
+  {{vm.test}}
+</div>
+<div ng-if="vm.isLoadingUsers">
+  Carregando usuários...
+</div>
+<div ng-if="vm.users">
+  <div ng-repeat="user in vm.users">
+    <pre>{{ user | json }}</pre>
+  </div>
+</div>
