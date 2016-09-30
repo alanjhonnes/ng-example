@@ -11,7 +11,6 @@ angular.module('myApp.exampleFeature')
 
     return {
       enter: function (element, doneFn, options) {
-        doneFn();
         var previousTween = _this.enterQueue.find((item => item.target === element));
         console.log(_this.enterQueue);
         if (previousTween) {
