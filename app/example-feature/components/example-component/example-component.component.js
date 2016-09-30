@@ -3,7 +3,15 @@ function ExampleComponentController(exampleService, exampleConstant) {
   exampleService.testService();
   console.log(exampleConstant);
   this.test = 'Teste do filtro';
-  this.editableText = 'test binding';
+  this.editableText = {
+    text: 'test binding'
+  };
+
+  function criaFuncao(x){
+    return function() {
+      return x;
+    }
+  }
 }
 
 angular.module('myApp.exampleFeature')
@@ -13,4 +21,8 @@ angular.module('myApp.exampleFeature')
   });
 
 ExampleComponentController.$inject = ['exampleService', 'exampleConstant'];
+
+ExampleComponentController.prototype.getText = function(){
+  return 'text';
+};
 

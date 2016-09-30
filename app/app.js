@@ -3,5 +3,6 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ui.router',
-  'myApp.exampleFeature'
+  'myApp.exampleFeature',
+  'ngAnimate'
 ]);

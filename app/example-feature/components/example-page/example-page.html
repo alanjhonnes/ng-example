@@ -7,8 +7,11 @@
 <div ng-if="vm.isLoadingUsers">
   Carregando usuários...
 </div>
-<div ng-if="vm.users">
-  <div ng-repeat="user in vm.users">
-    <pre>{{ user | json }}</pre>
+<button ng-click="vm.loadUsers()">Recarregar usuários</button>
+<button ng-click="vm.clearUsers()">Limpar usuários</button>
+<button ng-click="vm.addUsers()">Adicionar usuários</button>
+<div class="example-animate-container">
+  <div class="slide" ng-repeat="user in vm.users">
+    {{user.name}}
   </div>
 </div>
